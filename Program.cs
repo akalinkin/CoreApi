@@ -14,6 +14,7 @@ namespace CoreApi
         {
             var host = new WebHostBuilder()
                 .UseKestrel()
+                .UseUrls("0.0.0.0:50005") // allow to listen external connections on eth0 IP:50005
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
